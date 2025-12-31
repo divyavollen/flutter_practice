@@ -11,7 +11,7 @@ services:
     volumes:
       - ..:/workspace:cached
       - /var/run/docker.sock:/var/run/docker.sock
-      - ~/.ssh:/home/vscode/.ssh:ro 
+      - ~/.ssh:/home/vscode/.ssh:ro
 networks:
   default:
     name: flutter-practice
