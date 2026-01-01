@@ -3,10 +3,10 @@ FROM mcr.microsoft.com/devcontainers/base:ubuntu AS base
 
 # Arguments
 ARG NONROOT_USER=vscode
-ARG FLUTTER_VERSION=3.19.5-stable
-ARG CMD_LINETOOLS_VER=9477386
-ARG BUILD_TOOLS_VER=30.0.3
-ARG PLATFORM_VER=android-34
+ARG FLUTTER_VERSION=3.38.5-stable
+ARG CMD_LINETOOLS_VER=13114758
+ARG BUILD_TOOLS_VER=35.0.0
+ARG PLATFORM_VER=android-36
 
 # Environment variables
 ENV DOCKER_BUILDKIT=1
@@ -59,7 +59,8 @@ RUN yes | sdkmanager --licenses
 # # Install packages
 RUN sdkmanager "build-tools;${BUILD_TOOLS_VER}" \
 "platforms;${PLATFORM_VER}" \
-"platform-tools"
+"platform-tools" \
+"ndk;28.2.13676358"
 
 # Add Flutter to the PATH
 ENV PATH="/usr/local/flutter/bin:${PATH}"
