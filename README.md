@@ -1,4 +1,6 @@
-# Flutter practice app
+# Tasker App
+
+To Do practice app made with Flutter
 
 ## To Run on Android device
 ### On Host/VM run

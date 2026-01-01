@@ -5,7 +5,7 @@ services:
       dockerfile: Dockerfile
     env_file: devcontainer.env
     environment:
-      COMPOSE_PROJECT_NAME: flutter-practice
+      COMPOSE_PROJECT_NAME: tasker
       DISPLAY: ${DISPLAY}
     user: vscode
     volumes:
@@ -14,4 +14,4 @@ services:
       - ~/.ssh:/home/vscode/.ssh:ro 
 networks:
   default:
-    name: flutter-practice
+    name: tasker

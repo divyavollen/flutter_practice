@@ -8,6 +8,7 @@ ARG CMD_LINETOOLS_VER=13114758
 ARG BUILD_TOOLS_VER=35.0.0
 ARG PLATFORM_VER=android-36
 ARG NDK_VERSION=28.2.13676358
+ARG CMAKE_VER=3.22.1
 
 # Environment variables
 ENV DOCKER_BUILDKIT=1
@@ -61,7 +62,8 @@ RUN yes | sdkmanager --licenses
 RUN sdkmanager "build-tools;${BUILD_TOOLS_VER}" \
 "platforms;${PLATFORM_VER}" \
 "platform-tools" \
-"ndk;${NDK_VERSION}"
+"ndk;${NDK_VERSION}" \
+"cmake;${CMAKE_VER}"
 
 # Add Flutter to the PATH
 ENV PATH="/usr/local/flutter/bin:${PATH}"
